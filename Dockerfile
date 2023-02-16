@@ -1,3 +1,12 @@
-FROM tomcat:8
-LABEL app=my-app
-COPY target/*.war /usr/local/tomcat/webapps/myweb.war
+FROM node:latest
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+CMD [ "node", "index.js" ]
