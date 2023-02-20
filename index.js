@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
 app.use(express.static('public/'))
-app.listen(9090), function(){
-    console.log('Server listening at 9090');
+app.listen(3000), function(){
+    console.log('Server listening at 3000');
 };
